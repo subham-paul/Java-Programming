@@ -3,8 +3,8 @@ class MergeSortArr {
     public static void main(String[] args) {
         int arr1[] = new int[] { 1, 3, 5, 7, 9, 0, 0, 0 };
         int arr2[] = new int[] { 2, 4, 6 };
-        int m = 5;
-        int n = 3;
+        int m = 5, n = 3;
+
         mergeSortedArrLeetcode(arr1, m, arr2, n);
 
         int arr3[] = new int[] { 1, 3, 5, 7, 9 };
@@ -30,9 +30,9 @@ class MergeSortArr {
         }
 
         // printing array
-        for (int ele : arr1) {
-            System.out.print(ele + " ");
-        }
+        // for (int ele : arr1) {
+        //     System.out.print(ele + " ");
+        // }
     }
 
     public static void mergeSortedArr(int arr1[], int n, int arr2[], int m, int arr3[]) {
@@ -56,8 +56,8 @@ class MergeSortArr {
             arr3[k++] = arr2[j++];
         }
 
-        System.out.println();
-        System.out.println("from mergeSortedArr method");
+        // System.out.println();
+        System.out.print("From mergeSortedArr method ");
         // printing array
         for (int ele : arr3) {
             System.out.print(ele + " ");
