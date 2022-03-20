@@ -4,7 +4,7 @@ public class LearnStack {
 
     public static void main(String[] args) {
         Stack<String> animals= new Stack<>();
-
+        // Used LIFO (Last In First Out)
         animals.push("Lion");
         animals.push("Dog");
         animals.push("Horse");
