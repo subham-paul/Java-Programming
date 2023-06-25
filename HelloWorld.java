@@ -4,13 +4,18 @@ import java.util.Scanner;
 // Scanner is a predefined class for taking inputs from user.
 
 public class HelloWorld{
-    public static void main(String args[]){
-        System.out.println("Hello Subham!");
+    c
+        // System.out.println("Hello Subham!");
 
-        System.out.println();
-        Scanner subham = new Scanner(System.in);
-        System.out.print("enter a number here ");
-        int paul = subham.nextInt();
-        System.out.println("Print the number is " + paul);
+        // System.out.println();
+        // Scanner subham = new Scanner(System.in);
+        // System.out.print("enter a number here ");
+        // int paul = subham.nextInt();
+        // System.out.println("Print the number is " + paul);
+        String s;
+        int freq [] = new int[26];
+        for (int i = 0; i < freq.length(); i++) {
+            System.out.println(freq[i]);
+        }
     }
 }
