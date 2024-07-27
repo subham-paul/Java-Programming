@@ -1,5 +1,5 @@
-// Java program to implement 
-// a Singly Linked List 
+// Java program to implement
+// a Singly Linked List
 public class LinkedList {
 
 	Node head; // head of list
@@ -23,6 +23,7 @@ public class LinkedList {
 	public static LinkedList insert(LinkedList list, int data) {
 		// Create a new node with given data
 		Node new_node = new Node(data);
+		new_node.next = null;
 
 		// If the Linked List is empty,
 		// then make the new node as head
