@@ -5,7 +5,7 @@ public class ForLoop {
         Scanner SC = new Scanner(System.in);
         System.out.println("Enter Limits ");
         int n = SC.nextInt();
-        for(int i = 1; i<=n; i++){
+        for (int i = 1; i <= n; i++) {
             System.out.println("Apna College");
         }
     }
