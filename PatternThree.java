@@ -17,8 +17,8 @@ public class PatternThree {
 }
 
 // Enter a number 5
-// *     
-// * *   
-// * * * 
+// *
+// * *
+// * * *
 // * * * *
 // * * * * *

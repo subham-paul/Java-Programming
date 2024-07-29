@@ -16,16 +16,16 @@ public class LinearSearch {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter limit: ");
         int n = sc.nextInt();
-        
-        int arr[n];
-        for(int i = 1;i <= n ; i++){
-            arr[i]=sc.nextInt();
+
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter value for " + i + " of index : ");
+            arr[i] = sc.nextInt();
         }
 
-        int key ;
-        System.out.print("find number index ");
-        sc.nextInt(key);
-        System.out.println(linearSearch(arr,n,key));
-        
+        System.out.print("which one no. you want to search ? ");
+        int key = sc.nextInt();
+        System.out.println("It's present index no " + linearSearch(arr, n, key) + ".");
+
     }
 }

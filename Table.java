@@ -13,7 +13,7 @@ public class Table {
 }
 
 // enter number 5
-// 5 
+// 5
 // 10
 // 15
 // 20
