@@ -20,7 +20,7 @@ public class ArrayList1{
         subhamList.remove(2);
         System.out.println(subhamList);
 
-        list.remove(Integer.valueOf(139)); // This will remove 30 from the list
-        // System.out.println(list);
+        subhamList.remove(Integer.valueOf(30)); // This will remove 30 from the subhamList
+        System.out.println(subhamList);
     }
 }

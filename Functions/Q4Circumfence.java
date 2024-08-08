@@ -7,7 +7,8 @@ public class Q4Circumfence {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a no. ");
         Double r = sc.nextDouble();
-        System.out.println(getCircumference(radius));
+        System.out.println(getCircumference(r));
     }
 }
