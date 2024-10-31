@@ -1,10 +1,12 @@
+
 import java.util.Scanner;
 // import Scanner class which is in util folder inside the java folder.
 // Util stands for utility and contains utility classes.
 // Scanner is a predefined class for taking inputs from user.
 
-public class HelloWorld{
-    public static void main(String args[]){
+public class HelloWorld {
+
+    public static void main(String args[]) {
         System.out.println("Hello Subham!");
 
         System.out.println();
