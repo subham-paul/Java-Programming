@@ -7,7 +7,7 @@ public class WordBreakProb {
         boolean eow;
 
         public Node() {
-            for (int i = 1; i <= 26; i++) {
+            for (int i = 0; i < children.length; i++) {
                 children[i] = null;
             }
         }
@@ -16,49 +16,41 @@ public class WordBreakProb {
     public static Node root = new Node();
 
     public static void insert(String word) { // TC-> O(n)
+        int idx = 0;
         Node curr = root;
-        for (int i = 0; i < word.length(); i++) {
-            int idx = word.charAt(i) - 'a';
+
+        for (int level = 0; level < word.length(); level++) {
+            idx = word.charAt(level) - 'a';
             if (curr.children[idx] == null) {
-                // Add New Node
                 curr.children[idx] = new Node();
             }
-            if (i == word.length() - 1) {
-                curr.children[idx].eow = true;
-            }
             curr = curr.children[idx];
         }
+        curr.eow = true;
     }
 
-    public static boolean search(String key) {
+    public static boolean search(String key) { //O(n)
+        int idx = 0;
         Node curr = root;
-        int keyLen = key.length();
 
-        for (int i = 1; i <= keyLen; i++) {
-            int idx = key.charAt(i) - 'a';
-            Node node = curr.children[idx];
-
-            if (node == null) {
-                return false;
-            }
-            if (i == keyLen - 1 && node.eow == false) {
+        for (int level = 0; level < key.length(); level++) {
+            idx = key.charAt(level) - 'a';
+            if (curr.children[idx] == null) {
                 return false;
             }
             curr = curr.children[idx];
         }
-        return true;
+        return curr.eow == true;
     }
 
-    public static boolean checkWorkBreak(String key) {
-        int len = key.length();
-
-        if (len == 0) {
+    public static boolean wordBreak(String key) {
+        if (key.length() == 0) {
             return true;
         }
-        for (int i = 1; i <= len; i++) {
-            String firstPart = key.substring(0, i);
-            String secPart = key.substring(i);
-            if (search(firstPart) && checkWorkBreak(secPart)) {
+
+        for (int i = 1; i <= key.length(); i++) {
+            if (search(key.substring(0, i))
+                    && wordBreak(key.substring(i))) {
                 return true;
             }
         }
@@ -71,8 +63,9 @@ public class WordBreakProb {
 
         for (int i = 0; i < words.length; i++) {
             insert(words[i]);
+            // System.out.println("Inserted Word :: " + words[i]);
         }
-        // System.out.println();
-        System.out.println(checkWorkBreak(key));
+        System.out.println("Key :: "+key);
+        System.out.println(wordBreak(key));
     }
 }
